@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexlet</title>
+</head>
+
+<body>
+    <h1>Hexlet lectures</h1>
+    <div>
+        <p>Courses: <br>
+        <ol>
+            <li>
+                <a href="https://ru.hexlet.io/courses/introduction_to_programming" target="_blank"
+                    rel="noopener noreferrer">https://ru.hexlet.io/courses/introduction_to_programming</a>
+            </li>
+            <li>
+                <a href="https://ru.hexlet.io/courses/programming-basics" target="_blank"
+                    rel="noopener noreferrer">https://ru.hexlet.io/courses/programming-basics</a>
+            </li>
+        </ol>
+        </p>
+    </div>
+
+    <div>
+        <div id="chapter5">
+            <p>
+            <h4>5. Математика и константы. Task.</h4>
+            <script>
+                const weight = 60;
+                const c = 3 * 10 ** 8;
+                const energy = weight * c ** 2;
+                console.log('energy:');
+                console.log(energy);
+            </script>
+            </p>
+        </div>
+
+        <div id="chapter6">
+            <h4>6. Функции и ящики. Theory.</h4>
+            <a href="https://ru.hexlet.io/courses/introduction_to_programming/lessons/functions/theory_unit"
+                target="_blank"
+                rel="noopener noreferrer">https://ru.hexlet.io/courses/introduction_to_programming/lessons/functions/theory_unit</a>
+
+            <script>
+                const pi = Math.PI; //144413987
+                // const pi = 3.14; //144340776
+                console.log(pi);
+
+                const surfaceOfMars1 = 4 * pi * 3390 * 3390;
+                // const surfaceOfMars2 = surfaceAreaCalculator(3390);
+
+                const surfaceAreaCalculator = (radius) => {
+                    return 4 * pi * radius * radius;
+                };
+
+                const surfaceOfMars = surfaceAreaCalculator(3390);
+                console.log('surfaceAreaCalculator:');
+                console.log(surfaceAreaCalculator);
+
+                console.log('surfaceOfMars:');
+                console.log(surfaceOfMars);
+
+
+                const percentageCalculator = (number, total) => {
+                    return number * 100 / total;
+                };
+                console.log("How much of December is gone on 21-th of Dec.? ");
+                console.log(percentageCalculator(21, 31));
+
+                // Дополнение. Способы записи функций:
+
+                //  предпочтительным является () => {}.
+                // 1.
+                const identity1 = (value) => {
+                    return value;
+                };
+                // 2. Only for function with one argument
+                const identity2 = value => value;
+                // 3.
+                const identity3 = function (value) {
+                    return value;
+                };
+                // 4.
+                function identity4(value) {
+                    return value;
+                }
+            </script>
+
+            <h4>Task.</h4>
+            <script>
+                const squareOfSum = (a, b) => (a + b) ** 2;
+                console.log('squareOfSum(2, 3):');
+                console.log(squareOfSum);
+                console.log(squareOfSum(2, 3)); // 25
+            </script>
+        </div>
+
+        <div id="chapter7">
+            <h4>7. Условия и принятия решений. <br>AND $$, OR ||, NOT !. Theory.</h4>
+            <a href="https://ru.hexlet.io/courses/introduction_to_programming/lessons/boolean/theory_unit"
+                target="_blank"
+                rel="noopener noreferrer">https://ru.hexlet.io/courses/introduction_to_programming/lessons/boolean/theory_unit</a>
+            <script>
+                // return absolute value of number:
+                // 1.
+                const abs1 = (num) => {
+                    if (num > 0) {
+                        return num;
+                    } else if (num < 0) {
+                        return -num;
+                    } else {
+                        return 0;
+                    }
+                };
+
+                // 2.
+                const abs = (num) => {
+                    if (num === 0 || num > 0) {
+                        return num;
+                    } else {
+                        return -num;
+                    }
+                };
+
+                //  ternary operator:
+                // condition ? expression : expression
+                // const absValue = (num === 0 || num > 0) ? num : -num;
+                // const absValue = (num >= 0) ? num : -num;
+            </script>
+            <h4>Task.</h4>
+            <script>
+                function finalGrade(exam, projects) {
+                    // const finalGrade = (exam, projects) => {
+                    if (exam > 90 || projects > 10) {
+                        return 100;
+                    }
+                    if (exam > 75 && projects >= 5) {
+                        return 90;
+                    }
+                    if (exam > 50 && projects >= 2) {
+                        return 75;
+                    }
+                    return 0;
+                }
+
+                // test('finalGrade', () => {
+                //     expect(finalGrade(100, 12)).toBe(100);
+                //     expect(finalGrade(99, 0)).toBe(100);
+                //     expect(finalGrade(10, 15)).toBe(100);
+                //     expect(finalGrade(85, 5)).toBe(90);
+                //     expect(finalGrade(85, 4)).toBe(75);
+                //     expect(finalGrade(75, 5)).toBe(75);
+                //     expect(finalGrade(55, 3)).toBe(75);
+                //     expect(finalGrade(55, 2)).toBe(75);
+                //     expect(finalGrade(55, 0)).toBe(0);
+                //     expect(finalGrade(20, 2)).toBe(0);
+                // });
+
+                console.log(finalGrade);
+                console.log('finalGrade(100, 12)');
+                console.log(finalGrade(100, 12), finalGrade(85, 5));
+            </script>
+        </div>
+
+        <div id="chapter8">
+            <h4>8. Task.</h4>
+            <script></script>
+            <h4>Task.</h4>
+            <script>
+            </script>
+        </div>
+
+        <div id="chapter9">
+            <h4>9. Task.</h4>
+            <script></script>
+            <h4>Task.</h4>
+            <script>
+            </script>
+
+        </div>
+
+        <div id="chapter10">
+            <h4>10. Task.</h4>
+            <script></script>
+            <h4>Task.</h4>
+            <script>
+            </script>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
