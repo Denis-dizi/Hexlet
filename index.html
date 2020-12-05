@@ -166,7 +166,16 @@
         </div>
 
         <div id="chapter8">
-            <h4>8. Task.</h4>
+            <h4>8. Errors. О, нет, ошибки! И как с ними справляться.</h4>
+            <a href="https://ru.hexlet.io/courses/introduction_to_programming/lessons/errors/theory_unit"
+                target="_blank"
+                rel="noopener noreferrer">https://ru.hexlet.io/courses/introduction_to_programming/lessons/errors/theory_unit</a>
+            <ul>
+                <li>Syntax error.</li>
+                <li>Reference error.</li>
+                <li>Type error.</li>
+                <li>Logic error.</li>
+            </ul>
             <script></script>
             <h4>Task.</h4>
             <script>
@@ -174,8 +183,36 @@
         </div>
 
         <div id="chapter9">
-            <h4>9. Task.</h4>
-            <script></script>
+            <h4>9. Recursion.</h4>
+            <a href="https://ru.hexlet.io/courses/introduction_to_programming/lessons/recursion/theory_unit"
+                target="_blank"
+                rel="noopener noreferrer">https://ru.hexlet.io/courses/introduction_to_programming/lessons/recursion/theory_unit</a>
+            <script>
+                // факториал — n*(n-1)!
+                const factorial1 = (n) => {
+                    return 1 * 2 * 3 * 4;
+                }
+
+                const factorial = (n) => {
+                    if (n === 0) {
+                        return 1;
+                    } else {
+                        return n * factorial(n - 1);
+                    }
+                }
+                const answer = factorial(3);
+                console.log(answer);
+
+                // Steps of "factorial()"
+                factorial(3);
+                3 * factorial(2);
+                3 * 2 * factorial(1);
+                3 * 2 * 1 * factorial(0);
+                3 * 2 * 1 * 1;
+                3 * 2 * 1
+                3 * 2;
+                6;
+            </script>
             <h4>Task.</h4>
             <script>
             </script>
