@@ -212,6 +212,18 @@
                 3 * 2 * 1
                 3 * 2;
                 6;
+
+                // Two ways to write the same:
+                const sum1 = (n) => {
+                    if (n === 1) {
+                        return 1;
+                    }
+
+                    return n + sum1(n - 1);
+                };
+
+                // Ternary Operator: "?:"
+                const sum2 = n => (n === 1) ? 1 : n + sum2(n - 1);
             </script>
             <h4>Task.</h4>
             <script>
