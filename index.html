@@ -188,6 +188,7 @@
                 target="_blank"
                 rel="noopener noreferrer">https://ru.hexlet.io/courses/introduction_to_programming/lessons/recursion/theory_unit</a>
             <script>
+                console.group('Factorial');
                 // факториал — n*(n-1)!
                 const factorial1 = (n) => {
                     return 1 * 2 * 3 * 4;
@@ -201,6 +202,7 @@
                     }
                 }
                 const answer = factorial(3);
+                console.log('factorial(3):');
                 console.log(answer);
 
                 // Steps of "factorial()"
@@ -224,9 +226,44 @@
 
                 // Ternary Operator: "?:"
                 const sum2 = n => (n === 1) ? 1 : n + sum2(n - 1);
+                console.groupEnd;
             </script>
             <h4>Task.</h4>
+            <a href="http://pythontutor.com/visualize.html#code=const%20sequenceSum%20%3D%20%28begin,%20end%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20%28begin%20%3D%3D%3D%20end%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20begin%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20if%20%28begin%20%3E%20end%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20NaN%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20console.log%28begin,%20end%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20end%20%2B%20sequenceSum%28begin,%20end%20-%201%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sequenceSum%281,%205%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&cumulative=false&curInstr=10&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false"
+                target="_blank" rel="noopener noreferrer">VISUALIZE CODE EXECUTION</a>
             <script>
+                const sequenceSum1 = (begin, end) => {
+                    if (begin === end) {
+                        return begin;
+                    }
+                    if (begin > end) {
+                        return NaN;
+                    } else {
+                        console.log(begin, end);
+                        return end + sequenceSum1(begin, end - 1);
+                    }
+                };
+
+
+                const sequenceSum = (begin, end) => {
+                    if (begin === end) {
+                        return end;
+                    }
+                    if (begin > end) {
+                        return NaN;
+                    }
+                    return end + sequenceSum(begin, end - 1);
+                };
+
+                console.log('sequenceSum()');
+                console.log(sequenceSum(0, 0));
+                console.log(sequenceSum(1, 1));
+                console.log(sequenceSum(-1, -1));
+                console.log(sequenceSum(1, -1));
+                console.log(sequenceSum(1, 5));
+                console.log(sequenceSum(2, 6));
+                console.log(sequenceSum(-5, 4));
+                console.log(sequenceSum(1, -5));
             </script>
 
         </div>
